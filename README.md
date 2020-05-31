@@ -2,7 +2,7 @@
 
 A Python script that scrapes Indeed.com job listings
 
-### Features
+## Features
 
 * Allow multiple different keyword search queries
     * Specify how many pages to scrape per search query
@@ -14,7 +14,7 @@ A Python script that scrapes Indeed.com job listings
 * Sends out email notifications for newly posted roles via a local SMTP server
     * If no new postings are found, sends a template email instead (Sanity check)
 
-### Files
+## Files
 
 **web-scraper.py:** Main file to scrape the web and to choose which postings will be inserted into our SQLite database
 
@@ -25,22 +25,23 @@ A Python script that scrapes Indeed.com job listings
 **emailBody.txt:** Text file used to compile the body of the email
 
 
-### Configuration (Only: Personal-Computer Host)
+## Configuration (Hosting on a local computer)
 
-# pip install selenium
-# pip install bs4
-# pip install webdriver_manager 
+### `pip install selenium`
+### `pip install bs4`
+### `pip install webdriver_manager`
 
 * Setup all your settings/preferences found in settings.py
 * Create an empty text file in our working directory called: emailBody.txt
-* Once you are done with that, run our script using $ python web-scraper.py
+* Once you are done with that, run our script using:
+### `$ python web-scraper.py`
 
-### Troubleshooting
+## Troubleshooting
 
 * If you get a 'This version of ChromeDriver only supports Chrome Version XXX' error, you can find a solution at this link:
  https://stackoverflow.com/questions/60296873/sessionnotcreatedexception-message-session-not-created-this-version-of-chrome
 
 
-### Notes
+## Notes
 
 * Host the python application on AWS and use crontab to schedule it to run once a a day for best results
