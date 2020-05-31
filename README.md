@@ -27,9 +27,9 @@ A Python script that scrapes Indeed.com job listings
 
 ### Configuration (Only: Personal-Computer Host)
 
-# `pip install selenium`
-# `pip install bs4`
-# `pip install webdriver_manager`
+### `pip install selenium`
+### `pip install bs4`
+### `pip install webdriver_manager`
 
 * Setup all your settings/preferences found in settings.py
 * Create an empty text file in our working directory called: emailBody.txt
