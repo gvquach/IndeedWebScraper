@@ -25,7 +25,7 @@ A Python script that scrapes Indeed.com job listings
 **emailBody.txt:** Text file used to compile the body of the email
 
 
-### Configuration (Only: Personal-Computer Host)
+## Configuration (Only: Personal-Computer Host)
 
 ### `pip install selenium`
 ### `pip install bs4`
@@ -35,12 +35,12 @@ A Python script that scrapes Indeed.com job listings
 * Create an empty text file in our working directory called: emailBody.txt
 * Once you are done with that, run our script using $ python web-scraper.py
 
-### Troubleshooting
+## Troubleshooting
 
 * If you get a 'This version of ChromeDriver only supports Chrome Version XXX' error, you can find a solution at this link:
  https://stackoverflow.com/questions/60296873/sessionnotcreatedexception-message-session-not-created-this-version-of-chrome
 
 
-### Notes
+## Notes
 
 * Host the python application on AWS and use crontab to schedule it to run once a a day for best results
