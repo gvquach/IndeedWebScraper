@@ -6,7 +6,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
-from settings import MY_ADDRESS, PASSWORD, DB_FILE_LOCATION, RECIPIENT_EMAILS
+from settings import MY_ADDRESS, PASSWORD, DB_FILE_LOCATION, RECIPIENT_EMAILS, LAUNCH_APPLICATION_HOST
 
 def get_contacts(RECIPIENT_EMAILS):
     """
@@ -53,11 +53,11 @@ def main():
         msg['From']=MY_ADDRESS
         msg['To']=email
         if num_jobs == 0:
-            msg['Subject']="No new jobs found today"
+            msg['Subject']="No new jobs found today - Sent by {}".format(LAUNCH_APPLICATION_HOST)
         if num_jobs == 1:
-            msg['Subject']="1 new job found today"
+            msg['Subject']="1 new job found today - Sent by {}".format(LAUNCH_APPLICATION_HOST)
         else:
-            msg['Subject']="{0} new jobs have been found!".format(num_jobs)
+            msg['Subject']="{0} new jobs have been found! - Sent by {1}".format(num_jobs, LAUNCH_APPLICATION_HOST)
         
         # add in the message body
         msg.attach(MIMEText(message, 'plain'))
@@ -65,10 +65,6 @@ def main():
 # Attach the updated SQLite.db with the email
         # open the file to be sent  
         filename = "JobScraper_DB.db"
-        # AWS attachment
-        # attachment = open(r"/home/ec2-user/JobScraper_DB.db", "rb")
-        
-        # PC attachment
         attachment = open(DB_FILE_LOCATION, "rb") 
         
         # instance of MIMEBase and named as p 

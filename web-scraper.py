@@ -7,25 +7,19 @@ import sqlite3
 import sendEmail
 import os
 from selenium.webdriver.chrome.options import Options
-from settings import NUM_PAGES_PER_SEARCH, SEARCH_LIST, FILTERED_COMPANIES, FILTERED_TITLES, PRIORITY_TITLES
+from settings import NUM_PAGES_PER_SEARCH, SEARCH_LIST, FILTERED_COMPANIES, FILTERED_TITLES, PRIORITY_TITLES, LAUNCH_APPLICATION_HOST
 
-'''
-PC - > AWS
-------------
-ChromeDriver setup
-sendEmail - attachment file location
-'''
 # setup our driver and dataframe
 def main():
-    '''
     # AWS chromedriver setup
-    options = Options()
-    options.add_argument("--headless")
-    options.add_argument("window-size=1400,1500")
-    driver = webdriver.Chrome(options=options)
-    '''
+    if LAUNCH_APPLICATION_HOST == 'AWS':
+        options = Options()
+        options.add_argument("--headless")
+        options.add_argument("window-size=1400,1500")
+        driver = webdriver.Chrome(options=options)
     # Personal computer chromedriver setup
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    else:
+        driver = webdriver.Chrome(ChromeDriverManager().install())
     # Connect to SQLite db and initialize cursor
     conn = sqlite3.connect('JobScraper_DB.db')
     c = conn.cursor()

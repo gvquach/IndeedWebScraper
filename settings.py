@@ -36,13 +36,18 @@ PRIORITY_TITLES = [
 
 # the email address + password of the GMAIL account that will send our your emails
 MY_ADDRESS = 'whataddress@gmail.com'
-PASSWORD = 'whatismypw'
-
-# location of your JobScrape_DB.db file
-DB_FILE_LOCATION = r"FILE_LOCATION\JobScraper_DB.db"
+PASSWORD = 'whatismypw
 
 # 'name email' of the email you want the message sent to
 RECIPIENT_EMAILS = [
-    'name email',
-    'name email',    
+    'name email', 
 ]
+
+# set to AWS or PC
+LAUNCH_APPLICATION_HOST = 'PC'
+
+# location of your JobScrape_DB.db file
+if LAUNCH_APPLICATION_HOST == 'AWS':
+    DB_FILE_LOCATION = r"PATHTO/JobScraper_DB.db"
+else:
+    DB_FILE_LOCATION = r"PATHTO\JobScraper_DB.db"
