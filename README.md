@@ -33,7 +33,7 @@ A Python script that scrapes Indeed.com job listings
 
 * Setup all your settings/preferences found in settings.py
 * Create an empty text file in our working directory called: emailBody.txt
-* Once you are done with that, run our script using $ python web-scraper.py
+* Once you are done with that, run our script using `$ python web-scraper.py`
 
 ## Troubleshooting
 
