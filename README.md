@@ -2,7 +2,7 @@
 
 A Python script that scrapes Indeed.com job listings
 
-### Features
+## Features
 
 * Allow multiple different keyword search queries
     * Specify how many pages to scrape per search query
@@ -14,7 +14,7 @@ A Python script that scrapes Indeed.com job listings
 * Sends out email notifications for newly posted roles via a local SMTP server
     * If no new postings are found, sends a template email instead (Sanity check)
 
-### Files
+## Files
 
 **web-scraper.py:** Main file to scrape the web and to choose which postings will be inserted into our SQLite database
 
@@ -27,9 +27,9 @@ A Python script that scrapes Indeed.com job listings
 
 ### Configuration (Only: Personal-Computer Host)
 
-# pip install selenium
-# pip install bs4
-# pip install webdriver_manager 
+# `pip install selenium`
+# `pip install bs4`
+# `pip install webdriver_manager`
 
 * Setup all your settings/preferences found in settings.py
 * Create an empty text file in our working directory called: emailBody.txt
