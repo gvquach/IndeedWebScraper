@@ -25,7 +25,7 @@ A Python script that scrapes Indeed.com job listings
 **emailBody.txt:** Text file used to compile the body of the email
 
 
-## Configuration (Only: Personal-Computer Host)
+## Configuration (Hosting on a local computer)
 
 ### `pip install selenium`
 ### `pip install bs4`
