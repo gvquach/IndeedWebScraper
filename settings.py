@@ -39,6 +39,7 @@ MY_ADDRESS = 'whataddress@gmail.com'
 PASSWORD = 'whatismypw
 
 # 'name email' of the email you want the message sent to
+# likeso: 'greg greggy@gmail.com'
 RECIPIENT_EMAILS = [
     'name email', 
 ]
