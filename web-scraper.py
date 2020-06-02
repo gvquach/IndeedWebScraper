@@ -155,7 +155,7 @@ def emailMsg(company, title, date_posted, location, link):
             pass
         else:
             # can change this to just posted and today
-            if date_posted == 'Just Posted' or date_posted == '1 day ago':
+            if date_posted == 'Just Posted' or date_posted == 'Today':
                 f.write('{0}, {1}, {2}, {3}, {4}\n'.format(company, title, date_posted, location, link))
 
 # no new jobs email template
